@@ -56,6 +56,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 150px;
+    overflow: visible;
 }
 
 .hero__main {
@@ -125,6 +126,24 @@ body {
     font-family: var(--font2);
 }
 
+.nav__cta:nth-last-child(1):hover {
+    background: hsla(356, 91%, 65%, 0.836);
+    color: var(--color-white);
+    border: 1px solid hsla(356, 91%, 65%, 0.836);
+}
+
+.hero__cta:nth-of-type(1):hover {
+    background: hsl(356, 100%, 75%);
+    color: var(--color-white);
+    border: 1px solid hsl(356, 100%, 75%);
+}
+
+.hero__cta:nth-of-type(2):hover {
+    background: var(--color-white);
+    color: var(--color-l-red);
+    border: 1px solid hsl(356, 100%, 75%);
+}
+
 .nav__cta--bg {
     color: var(--color-white);
     border: none;
@@ -143,6 +162,49 @@ body {
 
 .nav__links-li {
     margin-left: 10px;
+    position: relative;
+    padding: 0 0 15px 0;
+}
+
+.nav__submenu {
+    margin-top: 15px;
+    background: #fff;
+    width: 150px;
+    position: absolute;
+    padding: 20px 20px;
+    border-radius: 7px;
+    left: -23px;
+    transform: translateY(-300px);
+    transition: all 0.5s;
+}
+
+.nav__submenu-li {
+    list-style: none;
+    line-height: 1.7;
+}
+
+.nav__submenu-a {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    font-family: var(--font2);
+    font-size: 1rem;
+}
+
+.nav__submenu-a:hover {
+    font-weight: 600;
+}
+
+.nav__links-li:hover .nav__img {
+    transform: rotate(-180deg);
+}
+
+.nav__links-li:hover {
+    text-decoration: underline;
+}
+
+.nav__links-li:hover .nav__submenu {
+    transform: translateY(0);
 }
 
 
@@ -285,6 +347,10 @@ body {
     color: hsl(240, 2%, 79%);
     font-size: 0.8rem;
     font-weight: 400;
+}
+
+.footer__ul-a:hover {
+    text-decoration: underline;
 }
 
 
